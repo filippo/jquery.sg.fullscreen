@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=7" > -->
+  <title>jQuery.sg.fullscreen tests</title>
+  <style media="screen">
+    * {margin: 0; padding: 0;}
+    body {
+      font: 14px/18px monospace;
+    }
+    #sgBackgroundContainer {
+      right: 0;
+      position: absolute;
+      bottom: 0;
+      z-index: -1;
+    }
+    #sgBackground {
+      right: 0;
+      position: fixed;
+      bottom: 0;
+      overflow: hidden;
+    }
+  </style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../lib/jquery.sg.fullscreen.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      $('#sgBackground img').fullscreen('fs.jpg', {baseWidth: '100%', baseHeight: '100%'});
+    });
+  </script>
+</head>
+
+<body>
+<div>
+  <h1>Here goes the content</h1>
+</div>
+<div id="sgBackgroundContainer">
+  <div id="sgBackground">
+    <img src="fs.jpg" />
+  </div>
+</div>
+</body>
+</html>
